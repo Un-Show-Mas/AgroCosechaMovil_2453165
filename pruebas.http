@@ -1,0 +1,36 @@
+### Ver todos los insumos
+GET http://localhost:5090/api/insumos
+
+### Filtrar por categoria
+GET http://localhost:5090/api/insumos?categoria=Semillas
+
+### Ver un insumo
+GET http://localhost:5090/api/insumos/3
+
+### Cotizacion valida con descuento
+POST http://localhost:5090/api/cotizaciones
+Content-Type: application/json
+
+{
+  "cliente": "Don Pedro Xicay",
+  "telefono": "55123456",
+  "items": [
+    { "insumoId": 3, "cantidad": 4 },
+    { "insumoId": 6, "cantidad": 2 }
+  ]
+}
+
+### Existencias insuficientes
+POST http://localhost:5090/api/cotizaciones
+Content-Type: application/json
+
+{
+  "cliente": "Dona Marta",
+  "telefono": "44556677",
+  "items": [
+    { "insumoId": 7, "cantidad": 9 }
+  ]
+}
+
+### Ver cotizaciones registradas
+GET http://localhost:5090/api/cotizaciones
