@@ -29,4 +29,4 @@ http://localhost:5090
 
 ## Repositorio
 
-REEMPLAZAR CON EL ENLACE PUBLICO DE GITHUB
+ ENLACE PUBLICO DE GITHUB: https://github.com/Un-Show-Mas/AgroCosechaMovil_2453165 
