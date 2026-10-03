@@ -1,0 +1,143 @@
+/* Diseno mobile-first para Agroservicio La Cosecha */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #F4F8EE;
+  color: #22331A;
+}
+
+button, input { font: inherit; }
+
+.barra {
+  background: #2E6B30;
+  color: white;
+  padding: 1rem;
+  display: grid;
+  gap: .75rem;
+}
+
+.barra h1 { margin: 0; font-size: 1.35rem; }
+.barra p { margin: .25rem 0 0; }
+
+.barra input,
+.formulario input,
+.cantidad {
+  min-height: 44px;
+  font-size: 16px;
+  border: 1px solid #CAD8C4;
+  border-radius: 8px;
+  padding: .65rem;
+  width: 100%;
+  background: white;
+}
+
+.contenedor { max-width: 1100px; margin: 0 auto; }
+.titulo-seccion { font-size: 1rem; margin: 1rem 1rem .5rem; }
+
+.chips {
+  display: flex;
+  gap: .5rem;
+  padding: 0 1rem .5rem;
+  overflow-x: auto;
+}
+
+.chip,
+.boton-agregar,
+.boton-principal {
+  min-width: 44px;
+  min-height: 44px;
+  border: 0;
+  border-radius: 9px;
+  cursor: pointer;
+}
+
+.chip {
+  background: #E3EDDF;
+  color: #234522;
+  padding: .65rem .9rem;
+  white-space: nowrap;
+}
+
+.chip.activo { background: #2E6B30; color: white; }
+
+.lista {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: .75rem;
+  padding: 1rem;
+}
+
+.tarjeta {
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,.12);
+}
+
+.tarjeta h2 { margin: 0 0 .35rem; font-size: 1.05rem; }
+.tarjeta small { color: #5B6B52; }
+.precio { font-size: 1.1rem; margin: .65rem 0; }
+
+.alerta {
+  display: inline-block;
+  background: #FFE0B2;
+  color: #8A4B00;
+  border-radius: 6px;
+  padding: .15rem .5rem;
+  font-size: .8rem;
+  margin-left: .25rem;
+}
+
+.acciones {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: .5rem;
+  margin-top: .75rem;
+}
+
+.boton-agregar,
+.boton-principal {
+  background: #2E6B30;
+  color: white;
+  padding: .7rem 1rem;
+}
+
+.mensaje,
+.resultado {
+  margin: 1rem;
+  padding: .85rem;
+  border-radius: 8px;
+}
+
+.mensaje { background: #FDECEA; color: #7A1F1F; }
+.resultado { background: #E8F5E9; border: 1px solid #A5D6A7; }
+.resultado.error { background: #FDECEA; border-color: #F2B8B5; color: #7A1F1F; }
+
+.cotizacion-panel {
+  margin: 0 1rem 2rem;
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,.12);
+}
+
+.resumen-cabecera { display: flex; justify-content: space-between; gap: 1rem; align-items: center; }
+.resumen-cabecera h2 { margin: 0; }
+.contador { background: #E3EDDF; padding: .35rem .6rem; border-radius: 999px; }
+.resumen-vacio { color: #657060; margin: 1rem 0; }
+.resumen-item { padding: .5rem 0; border-bottom: 1px solid #EDF1EA; }
+
+.formulario { display: grid; gap: .8rem; margin-top: 1rem; }
+.formulario label { display: grid; gap: .35rem; font-weight: 600; }
+
+@media (min-width: 600px) {
+  .lista { grid-template-columns: repeat(2, 1fr); }
+  .formulario { grid-template-columns: 1fr 1fr; }
+  .boton-principal { grid-column: 1 / -1; }
+}
+
+@media (min-width: 900px) {
+  .lista { grid-template-columns: repeat(3, 1fr); }
+}

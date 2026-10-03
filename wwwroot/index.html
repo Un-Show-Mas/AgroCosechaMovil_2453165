@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2E6B30">
+  <title>Agroservicio La Cosecha</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="img/icono.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header class="barra">
+    <div>
+      <h1>Agroservicio La Cosecha</h1>
+      <p>Catálogo movil de insumos agricolas</p>
+    </div>
+    <input id="buscar" type="search" placeholder="Buscar insumo..." aria-label="Buscar insumo">
+  </header>
+
+  <main class="contenedor">
+    <section>
+      <h2 class="titulo-seccion">Categorías</h2>
+      <div id="categorias" class="chips">
+        <button class="chip activo" data-categoria="">Todas</button>
+        <button class="chip" data-categoria="Semillas">Semillas</button>
+        <button class="chip" data-categoria="Fertilizantes">Fertilizantes</button>
+        <button class="chip" data-categoria="Herramientas">Herramientas</button>
+        <button class="chip" data-categoria="Protección">Protección</button>
+      </div>
+    </section>
+
+    <p id="mensaje" class="mensaje" hidden></p>
+
+    <section id="lista" class="lista" aria-live="polite"></section>
+
+    <section class="cotizacion-panel">
+      <div class="resumen-cabecera">
+        <h2>Mi cotización</h2>
+        <span id="contador" class="contador">0 insumos</span>
+      </div>
+
+      <div id="resumen" class="resumen-vacio">Todavía no has agregado insumos.</div>
+
+      <form id="formCotizacion" class="formulario">
+        <label>
+          Nombre del cliente
+          <input id="cliente" name="cliente" type="text" required placeholder="Ej. Juan Perez">
+        </label>
+
+        <label>
+          Teléfono
+          <input id="telefono" name="telefono" type="tel" pattern="[0-9]{8}" maxlength="8" required placeholder="55123456">
+        </label>
+
+        <button class="boton-principal" type="submit">Solicitar cotización</button>
+      </form>
+
+      <div id="resultado" class="resultado" hidden></div>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
